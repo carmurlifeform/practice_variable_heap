@@ -6,33 +6,19 @@ public class Main {
         // IntelliJ IDEA suggests fixing it.
         System.out.println("Hello and welcome!");
 
-        ModifiedHeap heap = new ModifiedHeap(1);
-        heap.insert(new intItem(-10));
+        ModifiedHeap heap = new ModifiedHeap(1,false);
+        heap.insert((Integer)10);
         System.out.println(heap);
-        heap.insert(new intItem(-15));
+        heap.insert((Integer)15);
         System.out.println(heap);
-        heap.insert(new intItem(-20));
+        heap.insert((Integer)20);
         System.out.println(heap);
-        heap.insert(new intItem(-17));
+        heap.insert((Integer)17);
         System.out.println(heap);
-        heap.insert(new intItem(-25));
+        heap.insert((Integer)25);
         System.out.println(heap);
-        System.out.println("popped heap of "+heap.popMax().order());
+        System.out.println("popped heap of "+heap.popMax().toString());
         System.out.println(heap);
 
-    }
-
-    private static class intItem implements OrderedItem{
-
-        public int value;
-
-        public intItem(int value){
-            this.value=value;
-        }
-
-        @Override
-        public int order() {
-            return value;
-        }
     }
 }
